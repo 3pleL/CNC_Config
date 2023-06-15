@@ -1,5 +1,8 @@
 # Configuration file for a '6 Pack External' PCB
-# Currently driving a cheap X/Y laser gantry
+# Currently driving a cheap X/Y laser gantry.
+# Uses 3 low power nema 17 motors with 200 steps/rev.
+# With 20T GT2 pulleys this results in 80 steps/mm.
+# Check https://blog.prusa3d.com/de/reprap-rechner_3416/ for calculations.
 board: 6 Pack
 name: 6 Pack External
 meta:
@@ -14,13 +17,13 @@ stepping:
 axes:
   shared_stepper_disable_pin: NO_PIN
   x:
-    steps_per_mm: 100.000
+    steps_per_mm: 80.000
     max_rate_mm_per_min: 5000.000
     acceleration_mm_per_sec2: 50.000
     max_travel_mm: 300.000
     soft_limits: false
     homing:
-      cycle: 2
+      cycle: 1
       allow_single_axis: true
       positive_direction: false
       mpos_mm: 0.000
