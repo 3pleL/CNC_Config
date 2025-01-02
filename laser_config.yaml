@@ -94,3 +94,17 @@ spi:
 sdcard:
   card_detect_pin: NO_PIN
   cs_pin: gpio.5
+
+pwm:
+  pwm_hz: 5000
+  direction_pin: NO_PIN
+  output_pin: gpio.25
+  enable_pin: NO_PIN
+  disable_with_s0: false
+  s0_with_disable: true
+  spinup_ms: 0
+  spindown_ms: 0
+  tool_num: 0
+  speed_map: 0=0.000% 255=100.000%
+  off_on_alarm: false
+  
